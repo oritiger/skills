@@ -44,6 +44,11 @@ WARNINGS = {
     "vỉa hè": "lề",
     "ngõ": "hẻm",
     "bệnh viện": "nhà thương",
+    "trượt": "trợt (trợt chân, trơn trợt); thi trượt → thi rớt",
+    "đen đủi": "xui, xui xẻo",
+    "giá đỗ": "giá",
+    "thế này": "vầy, như vầy",
+    "hẵng": "rồi mới…, … đã",
 }
 
 

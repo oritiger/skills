@@ -13,7 +13,22 @@ Phản hồi thật của người dùng, ghi lại để lần sau viết đún
 
 ## Được duyệt
 
-_(Chưa có.)_
+### Truyện kinh dị, giọng Nam Bộ · 2026-11-18
+- **Bài** (trích; bản đầy đủ khoảng 475 chữ, người kể "tui", ma đếm số trên cầu khỉ mùa nước nổi):
+
+  > Đêm đó tui nằm võng ngoài hiên, chị Hai ngủ trong buồng, cây đèn hột vịt vặn nhỏ lại. Tiếng đếm vọng từ phía cầu, đều đều như người ta đếm tiền xu cho khỏi quên. Giọng đàn bà.
+  >
+  > "Một. Hai. Ba."
+  >
+  > Tui nằm yên, hai tay bám cái võng. Tui đâu có đếm theo. Nhưng trong bụng tui đếm, cái đó tui chối hông được.
+  >
+  > […]
+  >
+  > Má tui đứng trên bờ, ôm rổ rau. Miệng má lẩm nhẩm. Tui ghé tai lại, nghe rõ ràng là đếm.
+  >
+  > "Bảy."
+- **Người dùng nói:** "Ok fix all" (duyệt, kèm các chỗ sửa bên dưới)
+- **Vì sao:** tin đồn qua nhiều miệng (Sơn Nam); câu dài nối phẩy rồi câu cụt "Giọng đàn bà." (Nguyễn Ngọc Tư); sợ hãi qua cơ thể ("hai tay bám cái võng"); người kể tự thú; tiếng đếm lặp nguyên văn từ một tới bảy rồi rơi vô người má; chi tiết cái nón vớt không được ở đầu, tìm thấy ở cuối. Đã sửa so với bản nháp: "trượt" thành "trợt", "đèn dầu" thành "đèn hột vịt", đổi tên "chị Tư" (trùng "bà Tư Đệ") thành "chị Hai", **bỏ câu chốt "Tui không dám hỏi đếm cái gì."** để truyện kết ở "Bảy.".
 
 ## Bị chê
 

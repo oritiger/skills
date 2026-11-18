@@ -20,7 +20,7 @@ Danh sách để rà bản nháp. `scripts/check_ai_tells.py` bắt được ph�
 | Bộ ba: "X, Y và Z", "có A, có B, có C" | Máy thích số ba cân đối | Giữ hai, hoặc bốn mà một cái lạc tông; hoặc hai vế lệch kết bằng phủ định ngắn ("Họ có nhà để về, chúng tôi thì không.") |
 | "Không chỉ… mà còn…" | Cặp đối xứng quen tay | Nói thẳng một ý; ý phụ để câu sau, ngắn |
 | Mở bài khái quát: "Trong thời đại…", "Ngày nay…", "Trong cuộc sống…" | Mở bằng bối cảnh chung thay vì sự việc | Mở bằng việc đang xảy ra, một người cụ thể, một con số |
-| Câu chốt cuối như khẩu hiệu, hoặc "Tóm lại…", "Hãy…" | Máy luôn khép bài gọn gàng | Kết bằng hình ảnh, câu hỏi bỏ ngỏ, nhận xét lơ đãng; quảng cáo thì kết bằng việc cụ thể cần làm |
+| Câu chốt cuối như khẩu hiệu, hoặc "Tóm lại…", "Hãy…" | Máy luôn khép bài gọn gàng | Kết bằng hình ảnh, câu hỏi bỏ ngỏ, nhận xét lơ đãng; quảng cáo thì kết bằng việc cụ thể cần làm. Câu cuối ngắn đứng riêng sau câu dài: thử bỏ nó, bài vẫn đứng được thì bỏ |
 | Hỏi rồi tự đáp: "Bạn có biết…? Đó chính là…" | Công thức gây tò mò | Bỏ câu hỏi, nói luôn; hoặc hỏi mà không trả lời |
 | Đoạn nào cũng 3–4 câu | Đều như xếp gạch | Có đoạn một câu, có đoạn dài |
 | Liên từ khung: "Bên cạnh đó", "Ngoài ra", "Hơn nữa", "Tuy nhiên", "Đặc biệt" | Văn nghị luận học trò, văn máy | "Mà", "rồi", "còn", "nhưng", hoặc không cần nối |
@@ -73,6 +73,6 @@ Sửa máy thành người không có nghĩa là làm bẩn văn:
 - **Không bịa chi tiết.** Con số, trải nghiệm, lời khách, lỗi "cho thật" mà người dùng không đưa thì không được viết vô. Thiếu thì hỏi, hoặc để `[chỗ trống]`.
 - Không cố ý sai chính tả, không viết tắt kiểu chat khi thể loại không cần.
 - Không nhồi tiếng lóng, khẩu ngữ, tiểu từ; mỗi đoạn vài chỗ là đủ.
-- Không rải câu cụt khắp nơi; câu cụt chỉ mạnh khi đứng cạnh câu dài.
+- Không rải câu cụt khắp nơi; câu cụt chỉ mạnh khi đứng cạnh câu dài. Checker cảnh báo khi CV riêng lời kể (bỏ lời thoại) vượt 0,9, tức vụn hơn mọi nhà văn đã đo.
 - Không tự thêm giọng địa phương khi người dùng không yêu cầu.
 - Sửa xong đọc lại tìm thói cũ mọc lại chỗ khác: bộ ba mới, câu chốt mới.

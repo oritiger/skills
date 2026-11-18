@@ -34,7 +34,10 @@ HUMAN_CV = {
     "Nguyễn Nhật Ánh": (0.53, 0.65),
 }
 CV_LOW, CV_OK = 0.35, 0.45
+CV_HIGH = 0.9  # narration choppier than any measured author: over-fragmented
 SCRIPT_MAX_WORDS = 25  # longer than this is hard to read aloud in one breath
+CLOSER_MODES = {"story", "ads", "script"}
+DIALOGUE_START = re.compile(r"^\s*[\"“«‘'\-–—]")
 
 WORD = re.compile(r"\w+")
 CHUNK_SPLIT = re.compile(r",\s+|\s+và\s+|\s+hoặc\s+|\s+hay\s+")
@@ -144,6 +147,8 @@ def analyze(text, mode="story", phrases=None):
     paragraphs = split_paragraphs(text)
     sentences = [s for p in paragraphs for s in split_sentences(p)]
     lengths = [len(words(s)) for s in sentences]
+    narration = [len(words(s)) for p in paragraphs if not DIALOGUE_START.match(p)
+                 for s in split_sentences(p) if not DIALOGUE_START.match(s)]
     n_words = len(words(text))
     warns = []
 
@@ -160,6 +165,10 @@ def analyze(text, mode="story", phrases=None):
         run = similar_run(lengths)
         if run >= 4:
             warn("run", f"{run} câu liền nhau dài xấp xỉ nhau: phá chuỗi này.")
+    c_narr = cv(narration) if len(narration) >= 8 else None
+    if c_narr is not None and c_narr > CV_HIGH and mode != "chat":
+        warn("choppy", f"Lời kể vụn quá (CV {c_narr:.2f} > {CV_HIGH}, cao hơn mọi nhà văn đã đo): "
+                       "câu cụt chỉ mạnh khi đứng cạnh câu dài, gộp bớt vài câu cụt.")
     counts = [len(split_sentences(p)) for p in paragraphs]
     if len(counts) >= 4 and max(counts) - min(counts) <= 1 and not soft and mode != "chat":
         warn("paragraphs", f"Đoạn đều nhau {counts}: cho một đoạn chỉ một câu, một đoạn dài hơn hẳn.")
@@ -234,6 +243,15 @@ def analyze(text, mode="story", phrases=None):
             warn("opener", f"Mở bài khái quát: «{sentences[0][:60]}» → mở bằng việc đang xảy ra.")
         if len(sentences) > 2 and CLOSER.search(sentences[-1].lower()):
             warn("closer", f"Câu chốt công thức: «{sentences[-1][:60]}».")
+        last, last_par = sentences[-1], paragraphs[-1]
+        own_par = len(paragraphs) >= 3 and len(split_sentences(last_par)) == 1
+        after_long = len(lengths) >= 2 and lengths[-2] >= 15
+        trails_off = last.rstrip().endswith(("...", "…"))
+        if (mode in CLOSER_MODES and len(sentences) >= 2 and not DIALOGUE_START.match(last_par)
+                and lengths[-1] <= 10 and last.rstrip().endswith((".", "!")) and not trails_off
+                and (own_par or after_long)):
+            warn("closer-punch", f"Câu cuối có thể là câu chốt đắt giá: «{last[:60]}». "
+                                 "Thử bỏ nó: bài vẫn đứng được thì bỏ.")
     formula = [s for s in sentences if re.match(r"(chỉ cần|chỉ với)\b", s.lower())]
     if formula and mode in ("ads", "script"):
         warn("formula", f"Công thức quảng cáo «Chỉ cần…»: «{formula[0][:60]}» → kể một lần dùng thật, cụ thể.")
@@ -254,7 +272,7 @@ def analyze(text, mode="story", phrases=None):
     if md and mode in NO_MARKDOWN_MODES:
         warn("markdown", "Văn xuôi có tiêu đề, gạch đầu dòng hoặc in đậm: viết thành câu, thành đoạn.")
 
-    return {"sentences": sentences, "lengths": lengths, "cv": c, "n_words": n_words,
+    return {"sentences": sentences, "lengths": lengths, "cv": c, "cv_narration": c_narr, "n_words": n_words,
             "paragraphs": len(paragraphs), "warnings": warns}
 
 
@@ -273,6 +291,8 @@ def main(argv):
         ref = ", ".join(f"{k} {a:.2f}–{b:.2f}" for k, (a, b) in HUMAN_CV.items())
         print(f"\n[NHỊP] độ dài câu: {r['lengths']}")
         print(f"  TB {mean(r['lengths']):.1f} chữ, CV {r['cv']:.2f}  (người viết thật: {ref})")
+        if r["cv_narration"] is not None:
+            print(f"  CV riêng lời kể (bỏ lời thoại): {r['cv_narration']:.2f}")
     print(f"\n[CẢNH BÁO] {len(r['warnings'])}")
     for _, msg in r["warnings"]:
         print(f"  - {msg}")

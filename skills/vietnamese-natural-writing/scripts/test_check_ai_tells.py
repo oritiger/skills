@@ -91,6 +91,30 @@ class Detection(unittest.TestCase):
     def test_markdown_in_chat(self):
         self.assertIn("markdown", codes("**Chào anh**\n- Đơn đã giao\n- Còn thiếu một món", "chat"))
 
+    def test_choppy_narration(self):
+        text = ("Đêm. Gió. Tui nằm yên trên cái võng ngoài hiên mà nghe nước liếm vô chân cột nhà từng hồi. "
+                "Lạnh. Im. Tiếng đếm. Gần. Xa. Rồi tui nghe tiếng con ểnh ương dưới đìa kêu một tiếng dài "
+                "thiệt dài rồi thôi luôn. Sợ.")
+        self.assertIn("choppy", codes(text))
+
+    def test_dialogue_does_not_count_as_choppy(self):
+        text = ("Tiếng đếm vọng từ phía cầu, đều đều như người ta đếm tiền cho khỏi quên.\n\n"
+                "\"Một. Hai. Ba.\"\n\n\"Bốn. Năm.\"\n\n\"Sáu.\"\n\n"
+                "Sáng ra ba tui ra cầu coi, cầu còn y nguyên, chỉ có thân dừa ướt sũng. "
+                "Má tui nói dấu mèo. Mà mèo nhà mình đi mất tiêu từ hôm nước lên. "
+                "Ba tui nhìn cái dấu một hồi lâu rồi đi vô nhà. Chiều nước rút. "
+                "Tui ra đìa sau nhà kiếm cái gáo bị trôi hồi hôm. Má đứng trên bờ.")
+        self.assertNotIn("choppy", codes(text))
+
+    def test_punchy_closer(self):
+        story = ("Má tui đứng trên bờ, ôm rổ rau.\n\nMiệng má lẩm nhẩm, tui ghé tai lại thì nghe rõ ràng là đếm.\n\n"
+                 "Tui không dám hỏi đếm cái gì.")
+        self.assertIn("closer-punch", codes(story))
+        ad = ("Gõ một câu, đi pha ly cà phê, quay lại là có video sáu mươi giây để đăng luôn lên trang. "
+              "Tui chưa từng mở Premiere lần nào.")
+        self.assertIn("closer-punch", codes(ad, "ads"))
+        self.assertNotIn("closer-punch", codes(story, "formal"))
+
     def test_self_answer(self):
         self.assertIn("self-answer", codes("Bạn có biết vì sao? Đó chính là nhờ công nghệ mới."))
 

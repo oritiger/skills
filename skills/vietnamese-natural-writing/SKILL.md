@@ -52,6 +52,7 @@ Rà theo [references/dau-hieu-ai.md](references/dau-hieu-ai.md). Tối thiểu, 
 - Lệch nhịp câu theo mức của chế độ (bảng cuối `che-do-viet.md`): gộp thành một câu thật dài, tách một ý thành câu thật ngắn, có đoạn chỉ một câu.
 - Liên từ khung ("Bên cạnh đó", "Ngoài ra") đổi thành mà / rồi / còn / nhưng, hoặc bỏ.
 - Truyện, quảng cáo: cảm xúc giao cho đồ vật và cơ thể, không gọi tên.
+- Truyện, quảng cáo: thử bỏ câu cuối. Bài vẫn đứng được thì bỏ; câu chốt đắt giá là thói máy.
 - Đọc lại tìm thói cũ mọc ra chỗ khác. Sửa chữ không đủ, phải đổi **khung**: nhịp, số vế, cách kết.
 
 Đừng sửa quá tay (mục F trong `dau-hieu-ai.md`): không nhồi tiếng lóng, không cố ý sai chính tả, không rải câu cụt khắp nơi.
@@ -67,7 +68,7 @@ python3 SKILL_DIR/scripts/check_ai_tells.py --mode story bai-viet.md
 
 `--mode`: `story` (truyện, sáng tạo, tự nhiên hóa), `ads`, `script` (kịch bản video, lời đọc), `chat`, `polite`, `formal`, `academic`. Chọn cái gần thể loại của bài nhất.
 
-Checker đo độ lệch nhịp câu (CV) so với bốn nhà văn (0,5–0,7; dưới 0,35 là đều như máy), bắt chuỗi câu dài bằng nhau, đoạn đều nhau, bộ ba, từ sáo, mở và kết công thức. Nó chỉ gợi ý: sửa cảnh báo nào hợp lý, đừng sửa văn cho đẹp số. Văn trang trọng, học thuật đều hơn là bình thường.
+Checker đo độ lệch nhịp câu (CV) so với bốn nhà văn (0,5–0,7; dưới 0,35 là đều như máy; lời kể trên 0,9 là vụn quá), bắt chuỗi câu dài bằng nhau, đoạn đều nhau, bộ ba, từ sáo, mở và kết công thức, câu chốt đắt giá ở cuối. Nó chỉ gợi ý: sửa cảnh báo nào hợp lý, đừng sửa văn cho đẹp số. Văn trang trọng, học thuật đều hơn là bình thường.
 
 Checker **không** bắt được chi tiết bịa, cảm xúc gọi tên, thoại chuẩn mực, nội dung chung chung. Mấy cái đó phải tự đọc to một lần.
 
