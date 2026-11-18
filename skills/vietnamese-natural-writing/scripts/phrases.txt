@@ -1,0 +1,117 @@
+# Cụm từ dấu hiệu văn máy, đọc bởi check_ai_tells.py.
+# Mỗi dòng một cụm, chữ thường. Dòng bắt đầu bằng dấu thăng là ghi chú.
+# Thêm cụm mới vô đúng mục, rồi chạy: python3 scripts/test_check_ai_tells.py
+#
+# [strong]          gần như luôn lộ, mọi chế độ
+# [ads]             sáo quảng cáo, mọi chế độ
+# [connectors]      liên từ khung (văn trang trọng, học thuật được dùng ít)
+# [density]         dùng nhiều mới lộ, tính theo mật độ
+# [wrappers]        vỏ bọc trợ lý
+# [translationese]  dấu vết dịch máy
+# [emotion]         gọi tên cảm xúc (truyện, quảng cáo, kịch bản, chat)
+
+[strong]
+trong thời đại
+trong bối cảnh
+trong cuộc sống hiện đại
+kỷ nguyên số
+đóng vai trò quan trọng
+đóng vai trò then chốt
+không thể phủ nhận
+điều này cho thấy
+góp phần
+nâng tầm
+hành trình
+chạm đến trái tim
+lan tỏa
+lan toả
+giá trị cốt lõi
+đa dạng và phong phú
+phong phú và đa dạng
+trải nghiệm tuyệt vời
+chìa khóa
+chìa khoá
+bí quyết
+đồng hành cùng
+tóm lại
+nói tóm lại
+nhìn chung
+có thể nói
+điều đáng nói là
+
+[ads]
+từ a đến z
+chỉ với một cú click
+chỉ với một cú nhấp
+chỉ với một cú chạm
+hoàn toàn miễn phí
+đừng bỏ lỡ
+còn chần chừ gì nữa
+nhanh tay
+cơ hội vàng
+giải pháp toàn diện
+hàng đầu
+đẳng cấp
+vượt trội
+tối ưu
+hoàn hảo
+hoàn chỉnh
+tiết kiệm thời gian
+xin chào các bạn
+hôm nay mình sẽ
+
+[connectors]
+bên cạnh đó
+ngoài ra
+không chỉ vậy
+hơn thế nữa
+hơn nữa
+thêm vào đó
+đặc biệt là
+trên thực tế
+
+[density]
+mang lại
+mang đến
+thực sự
+vô cùng
+tuyệt vời
+ấn tượng
+khám phá
+
+[wrappers]
+dưới đây là
+đây là phiên bản
+hy vọng
+chúc bạn
+nếu bạn cần thêm
+tôi rất sẵn lòng
+rất vui được
+
+[translationese]
+được thiết kế
+được tạo ra
+được phát triển
+được biết đến
+được xem là
+được coi là
+cho phép bạn
+giúp bạn dễ dàng
+
+[emotion]
+vô cùng xúc động
+xúc động
+hạnh phúc
+cảm động
+nỗi buồn
+niềm vui
+sâu sắc
+tràn ngập
+ngập tràn
+trào dâng
+dâng trào
+bồi hồi
+da diết
+khôn nguôi
+hân hoan
+thổn thức
