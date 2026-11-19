@@ -49,6 +49,9 @@ WARNINGS = {
     "giá đỗ": "giá",
     "thế này": "vầy, như vầy",
     "hẵng": "rồi mới…, … đã",
+    "thảo nào": "hèn chi, hèn gì",
+    "ai bảo": "ai biểu",
+    "trông có vẻ": "coi bộ",
 }
 
 

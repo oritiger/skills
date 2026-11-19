@@ -58,3 +58,11 @@ Chưa có bản đọc được trên mạng; tra bản in khi cần kiểm ch�
 Mỗi từ dưới đây mới thấy ở một nguồn. Tìm thêm một nguồn độc lập (hoặc người dùng xác nhận) rồi mới `add`.
 
 _(Trống. Ngày 2026-11-18 người dùng đã duyệt và thêm hết danh sách trước.)_
+
+### Đã thêm theo duyệt của người dùng, còn chờ kiểm chứng
+
+Ngày 2026-11-19 người dùng duyệt thêm trước nhóm "Từ chen & dấu hiệu diễn ngôn" ("Maybe add some for now, we will enrich later"). Đợt làm giàu sau: tìm nguồn cho từng mục, sửa nghĩa nếu nguồn nói khác, bỏ mục nào hóa ra là từ toàn dân hay miền Trung.
+
+- **Có một nguồn:** thấy mồ, chớ bộ (bài [Tiểu từ tình thái phối kết thấy mồ, chớ bộ, mèn ơi cuối phát ngôn trong giao tiếp của người Nam Bộ](https://vjol.info.vn/tudienhoc/article/view/130363), Từ điển học & Bách khoa thư; bản PDF chưa đọc được); coi bộ (ví dụ hội thoại Nam Bộ trong cùng bài).
+- **Người dùng đưa:** ta nói.
+- **Chưa có nguồn:** coi bộ (nguồn thứ hai), hèn chi / hèn gì, té ra, nói nào ngay, nói thiệt / tình thiệt, nói vậy chớ, vậy chớ, hổng chừng, mắc gì / mắc mớ gì, ai biểu, ủa, ờ há, đó giờ, bởi vậy mới nói, gì đâu, hết biết, dễ sợ, chớ sao, ai dè.

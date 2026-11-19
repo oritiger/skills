@@ -36,13 +36,36 @@ Người Nam chính gốc không nói "ạ" ở cuối câu và không đáp "v�
 | thật | thiệt |
 | ngay | liền |
 | mãi | hoài, miết, riết |
-| rất, lắm | quá trời, dữ lắm, dữ thần |
+| rất, lắm | quá trời, dữ lắm, dữ thần; sau tính từ: thấy mồ, hết biết, dễ sợ, gì đâu |
 
 **Đại từ rút gọn (thanh hỏi):** anh ấy → **ảnh**, chị ấy → **chỉ**, ông ấy → **ổng**, bà ấy → **bả**, cô ấy → **cổ**, em ấy → **ẻm**. Chỉ hướng: bên ấy → **bển**, trong ấy → **trỏng**, ngoài ấy → **ngoải**, trên ấy → **trển**.
 
 **Xưng hô:** mặc định xưng "em", gọi người dùng "anh/chị". Nếu người dùng tự xưng hoặc muốn cách xưng khác thì theo người dùng. Trả lời thân mật dùng "Ừa / Ờ", lễ phép dùng "Dạ".
 
 **Biến âm khẩu ngữ:** không → **hông / hổng**, vào → **vô** (khẩu ngữ đậm: **dzô**), với → **dới / dzới**.
+
+**Từ chen & dẫn chuyện:** người Nam hay nêu chủ đề trước, chen một cụm như **ta nói**, rồi dùng **nó** nhắc lại chủ đề, kết bằng từ nhấn:
+
+> Mà món ăn ở miền Tây **ta nói nó** ngon **làm sao**. (Food in the Mekong Delta, let me tell you, it is so good!)
+> Con nhỏ đó **ta nói nó** dễ thương **gì đâu**.
+
+| Bắc / phổ thông | Nam |
+| :--- | :--- |
+| ơ (ngạc nhiên) | ủa |
+| ừ nhỉ, à phải rồi | ờ há, ờ ha |
+| thảo nào | hèn chi, hèn gì |
+| hóa ra | té ra |
+| trông có vẻ, xem ra | coi bộ |
+| có khi, biết đâu | hổng chừng |
+| ai bảo | ai biểu |
+| việc gì mà, sao lại | mắc gì, mắc mớ gì |
+| vì thế, thế mới nói | bởi vậy, bởi vậy mới nói |
+| từ trước đến giờ | đó giờ |
+| nói thật, công bằng mà nói | nói thiệt, nói nào ngay |
+| nói thế nhưng | nói vậy chớ |
+| thế thì (đầu câu hỏi) | vậy chớ |
+
+Đủ danh sách ở nhóm "Từ chen & dấu hiệu diễn ngôn" của từ điển. Mỗi đoạn một, hai cụm chen là đủ, dùng chủ yếu trong lời thoại, chat, truyện; văn trang trọng thì bỏ.
 
 ## 3. Phạm vi & mức độ đậm
 
@@ -67,7 +90,7 @@ Người Nam chính gốc không nói "ạ" ở cuối câu và không đáp "v�
 
 ## 5. Từ điển
 
-Kho từ đầy đủ nằm ở [references/tu-dien-mien-tay.yaml](references/tu-dien-mien-tay.yaml), mỗi dòng một mục `<từ Nam>: <nghĩa / từ Bắc tương đương>`, chia theo nhóm: thành ngữ & thán từ, từ Miền Tây xưa ít dùng, đối chiếu Bắc → Nam theo chủ đề. Đọc file này khi viết đoạn dài, khi viết truyện hay lời thoại cần đậm chất Miền Tây, hoặc khi phân vân một từ là Bắc hay Nam (tìm nhanh bằng `grep -i "<từ>"`).
+Kho từ đầy đủ nằm ở [references/tu-dien-mien-tay.yaml](references/tu-dien-mien-tay.yaml), mỗi dòng một mục `<từ Nam>: <nghĩa / từ Bắc tương đương>`, chia theo nhóm: thành ngữ & thán từ, từ Miền Tây xưa ít dùng, đối chiếu Bắc → Nam theo chủ đề, tiểu từ cuối câu, từ chen & dấu hiệu diễn ngôn. Đọc file này khi viết đoạn dài, khi viết truyện hay lời thoại cần đậm chất Miền Tây, hoặc khi phân vân một từ là Bắc hay Nam (tìm nhanh bằng `grep -i "<từ>"`).
 
 ## 6. Rà soát trước khi xuất (Pre-Output Linter)
 
